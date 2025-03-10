@@ -4,6 +4,7 @@ import mentorControllers from "./controllers/mentorControllers";
 import investorControllers from "./controllers/investorControllers";
 import entepriseControllers from "./controllers/entepriseControllers";
 import startupControllers from "./controllers/startupControllers";
+import profileControllers from "./controllers/profilesControllers";
 import main from './controllers/main'
 
 
@@ -41,6 +42,19 @@ router.get('/start-up/:id',startupControllers.getById);
 router.patch('/start-up/:id',startupControllers.update);
 router.delete('/start-up/:id',startupControllers.delete);
 
-
+//profiles
+router.post('/profile',profileControllers.create);
+router.get('/profile',profileControllers.getAll);
+router.get('/profile-enteprises',profileControllers.getAllEnteprise);
+router.get('/profile-investors',profileControllers.getAllInvestor);
+router.get('/profile-mentors',profileControllers.getAllMentors);
+router.get('/profile-trainers',profileControllers.getAllTrainers);
+router.get('/profile-consultants',profileControllers.getAllConsultants);
+router.get('/profile-startups',profileControllers.getAllStartup);
+router.get('/profile-others',profileControllers.getAllOther);
+router.get('/profile/:id',profileControllers.getById);
+router.patch('/profile/:id',profileControllers.update);
+router.delete('/profile/:id',profileControllers.delete);
+router.delete('/profile-user/:token',profileControllers.getUser);
 
 export default router;
