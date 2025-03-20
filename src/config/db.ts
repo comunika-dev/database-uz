@@ -1,11 +1,13 @@
 import mysql from 'mysql'
 
 const db = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'incubadora'
+  host     : `${process.env.INCUBATOR_DB_HOST}`,
+  user     : `${process.env.INCUBATOR_DB_USER}`,
+  password : `${process.env.INCUBATOR_DB_PASSWORD}`,
+  database : `${process.env.INCUBATOR_DB_NAME}`
 });
+
+
  
 db.connect((err) => {
   if (err) {

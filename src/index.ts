@@ -2,10 +2,11 @@ import express from 'express'
 import cors from 'cors'
 import helmet from 'helmet';
 import routes from './routes'
-import mysql from 'mysql'
+import 'dotenv/config'
 
+// dotenv.config();
 const app = express();
-const port = process.env.PORT || 3333;
+const port = process.env.PORT || 3434;
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
@@ -16,6 +17,6 @@ app.use(routes);
 
 
 
-app.listen(3333,()=>{
+app.listen(3434,()=>{
   console.log("Http server running")
 })

@@ -115,7 +115,7 @@ export default {
     });
   },
   async getAllOther(req: Request, res: Response) {
-    const sql = "SELECT * FROM mdl_profiles where type='Outros'";
+    const sql = "SELECT * FROM mdl_profiles where type='Estudante' or type='Outro'";
 
     db.query(sql, (error, data) => {
       if (error) return res.json({ message: "Error encountered", error });
