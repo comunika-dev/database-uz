@@ -1,10 +1,10 @@
 import mysql from 'mysql'
 
 const db = mysql.createConnection({
-  host     : `${process.env.INCUBATOR_DB_HOST}`,
-  user     : `${process.env.INCUBATOR_DB_USER}`,
-  password : `${process.env.INCUBATOR_DB_PASSWORD}`,
-  database : `${process.env.INCUBATOR_DB_NAME}`
+  host     : "srv1385.hstgr.io",
+  user     : "u803280130_incubator",
+  password : "2GqBUuK!:",
+  database : "u803280130_incubator"
 });
 
 
